@@ -1,0 +1,19 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "babel": "^5.6.23",
+    "jade": "^1.11.0",
+    "koa": "^0.21.0",
+    "koa-static": "^1.4.9",
+    "koa-views": "^3.1.0",
+    "lodash": "^3.10.0"
+  }
+}
