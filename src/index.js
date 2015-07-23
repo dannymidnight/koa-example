@@ -1,19 +1,18 @@
-const koa = require('koa');
-const serve = require('koa-static');
-const path = require('path');
+import koa from 'koa';
+import mount from 'koa-mount';
+import serve from 'koa-static';
+import path from 'path';
+import index from './routes/index';
+
 const app = koa();
 const port = process.env.PORT || 5000;
 
-app.use(serve(path.resolve(__dirname, '../dist')));
 app.use(require('./errors'));
 app.use(require('./views'));
 app.use(require('./assets'));
+app.use(serve(path.resolve(__dirname, '../dist')));
 
-app.use(function *() {
-  yield this.render('index', {
-    title: 'Hello World'
-  });
-});
+app.use(mount('/', index));
 
 app.listen(port, () => {
   console.log(`* Running on 0.0.0.0:${port}`);
