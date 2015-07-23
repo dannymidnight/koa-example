@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "babel": "^5.6.23",
+    "bookshelf": "^0.8.1",
     "jade": "^1.11.0",
+    "knex": "0.8.3",
     "koa": "^0.21.0",
     "koa-mount": "^1.3.0",
     "koa-route": "^2.4.2",
     "koa-static": "^1.4.9",
     "koa-views": "^3.1.0",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "pg": "^4.4.0"
   },
   "devDependencies": {
     "babel-core": "~4.7.16",
@@ -44,6 +47,7 @@
     "gulp-util": "~3.0.4",
     "node-libs-browser": "^0.5.2",
     "nodemon": "^1.3.7",
+    "prompt": "^0.2.14",
     "run-sequence": "~1.0.2",
     "sass-graph": "^2.0.0",
     "through2": "~0.6.3",

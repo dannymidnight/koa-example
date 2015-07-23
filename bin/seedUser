@@ -1,0 +1,19 @@
+#!/usr/bin/node
+
+require('babel/register');
+
+const User = require('../src/models/user');
+const prompt = require('prompt');
+
+console.log('Please enter user information:');
+prompt.start();
+
+prompt.get(['first_name', 'last_name', 'email'], function(err, result) {
+  if (err) { throw err; }
+
+  new User(result).save().then(function(user) {
+    console.log('User %d is created.', user.id);
+  })
+  .catch(console.error)
+  .finally(process.exit);
+});
