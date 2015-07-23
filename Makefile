@@ -26,8 +26,11 @@ watch_assets:
 assets:
 	node_modules/.bin/gulp
 
+console:
+	docker-compose run --rm web bash
+
 # Clean up docker containers
 clean:
 	docker ps -aqf name=example | xargs docker rm -f
 
-.PHONY: install run docker clean
+.PHONY: install run docker clean console
