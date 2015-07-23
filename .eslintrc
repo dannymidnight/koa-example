@@ -1,0 +1,28 @@
+---
+  env:
+    browser: true
+    node: true
+  ecmaFeatures:
+    arrowFunctions: true
+    blockBindings: true
+    modules: true
+    templateStrings: true
+    jsx: true
+    classes: true
+    defaultParams: true
+    destructuring: true
+    forOf: true
+    generators: true
+  rules:
+    quotes: [1, "single"]
+    strict: [2, "global"]
+    no-use-before-define: 2
+    no-mixed-spaces-and-tabs: 2
+    indent: [2, 2]
+    space-after-keywords: 2
+  globals:
+    window: false
+    require: true
+    expect: false
+    __DEV__: false
+    beforeEach: false

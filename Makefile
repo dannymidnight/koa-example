@@ -9,10 +9,22 @@ install:
 	docker create -v /app/node_modules --name node_modules library/busybox &>/dev/null || :
 	docker-compose run --rm --no-deps web npm install
 
-# Start development vm
+# Start development vm and build docker images
 docker:
-	boot2docker up
+	boot2docker up --vbox-share='disable'
 	docker-compose build
+
+watch:
+	make watch_fs watch_assets -j2
+
+watch_fs:
+	docker-osx-dev -l WARN
+
+watch_assets:
+	node_modules/.bin/gulp watch
+
+assets:
+	node_modules/.bin/gulp
 
 # Clean up docker containers
 clean:

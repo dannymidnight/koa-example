@@ -1,6 +1,8 @@
+# Base docker image for a development VM
+
 FROM mhart/alpine-iojs
 
-RUN apk --update add bash rsync
+RUN apk --update add bash rsync python make gcc g++
 
 # Add startup scripts
 ADD docker/web/scripts/env.sh /env.sh
