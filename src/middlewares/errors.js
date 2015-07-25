@@ -6,4 +6,4 @@ export default function *(next) {
     this.body = err.message;
     this.app.emit('error', err, this);
   }
-};
+}
