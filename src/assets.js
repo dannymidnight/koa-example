@@ -9,7 +9,7 @@ try {
     fs.readFileSync(path.resolve(__dirname, '../dist/manifest.json'), 'utf8')
   );
 } catch (e) {
-  console.error('Invalid manifest file');
+  throw new Error('Missing manifest file');
 }
 
 function resolvePath (file) {
