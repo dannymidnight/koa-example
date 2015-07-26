@@ -5,6 +5,7 @@ const app = koa();
 const port = process.env.PORT || 5000;
 
 app.use(serve(path.resolve(__dirname, '../dist')));
+app.use(require('./errors'));
 app.use(require('./views'));
 app.use(require('./assets'));
 
