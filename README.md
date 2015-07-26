@@ -23,3 +23,17 @@
 
 Running application
 `http::/dockerhost:5000`
+
+### Migrations
+Migrations are performed using [knex]()
+
+```sh
+# Upgrade to latest version
+docker-compose run web knex migrate:latest
+
+# Rollback a single version
+docker-compose run web knex migrate:rollback
+```
+
+### Deployment
+TODO
