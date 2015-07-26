@@ -3,8 +3,10 @@ import koa from 'koa';
 let index = koa();
 
 index.use(function *() {
-  yield this.render('index', {
-    title: 'Hello World'
+  this.body = this.react('Homepage', {
+    title: 'Hello world',
+    styles: ['css/index.css'],
+    scripts: ['js/index.js']
   });
 });
 

@@ -10,6 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(require('./middlewares/errors'));
 app.use(require('./middlewares/views'));
 app.use(require('./middlewares/assets'));
+app.use(require('./middlewares/react'));
 app.use(serve(path.resolve(__dirname, '../dist')));
 
 app.use(mount('/', index));

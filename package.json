@@ -19,7 +19,8 @@
     "koa-static": "^1.4.9",
     "koa-views": "^3.1.0",
     "lodash": "^3.10.0",
-    "pg": "^4.4.0"
+    "pg": "^4.4.0",
+    "react": "^0.13.3"
   },
   "devDependencies": {
     "babel-core": "~4.7.16",
